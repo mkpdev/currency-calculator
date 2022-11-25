@@ -14,6 +14,7 @@ import { CalculatePriceDialogComponent } from './calculate-price-dialog/calculat
     RouterModule.forChild([
       { path: '', redirectTo: '/product-list', pathMatch: 'full' },
       { path: 'product-list', component: ProductListComponent },
+      { path: '**', redirectTo: '/product-list' },
     ]),
   ],
 })
