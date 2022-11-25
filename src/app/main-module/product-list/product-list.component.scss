@@ -1,3 +1,11 @@
+.mat-card-header {
+  justify-content: center;
+
+  .mat-card-title {
+    margin-bottom: unset;
+  }
+}
+
 table {
   width: 100%;
 }
