@@ -18,3 +18,13 @@
     margin-bottom: unset;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .mat-dialog-content {
+    flex-direction: column;
+
+    .selected-products-table {
+      width: 90%;
+    }
+  }
+}
