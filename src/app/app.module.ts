@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material/material.module';
+import { MaterialModule } from './material/material.module';
 import { MainModule } from './main-module/main.module';
 import { HeaderComponent } from './layout/header/header.component';
 
