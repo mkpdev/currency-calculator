@@ -34,7 +34,7 @@
     </table>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" [disabled]="!selectedProduct.length" (click)="calculateTotalPrice()">
+    <button mat-raised-button color="primary" [disabled]="!selection.selected.length" (click)="calculateTotalPrice()">
       Calculate Total Price
     </button>
   </mat-card-actions>

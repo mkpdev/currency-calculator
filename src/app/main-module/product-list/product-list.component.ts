@@ -14,7 +14,6 @@ import { CalculatePriceDialogComponent } from '../calculate-price-dialog/calcula
 export class ProductListComponent implements OnInit {
   dataSource: any;
   selection = new SelectionModel<Product>(true, []);
-  selectedProduct: Product[] = [];
   displayedColumns: string[] = ['select', 'id', 'title', 'price'];
 
   constructor(private mainService: MainService, private dialog: MatDialog) {}
@@ -30,7 +29,7 @@ export class ProductListComponent implements OnInit {
       height: '600px',
       width: '800px',
       data: {
-        dataSource: this.selectedProduct,
+        dataSource: this.selection?.selected,
       },
     });
   }
@@ -38,10 +37,6 @@ export class ProductListComponent implements OnInit {
   isAllSelected() {
     const selectedItems = this.selection.selected.length;
     const selectedRows = this.dataSource.length;
-    this.selectedProduct = [];
-    this.selectedProduct = this.selection?.selected
-      ? this.selection?.selected
-      : [];
     return selectedItems === selectedRows;
   }
 
@@ -49,6 +44,5 @@ export class ProductListComponent implements OnInit {
     this.isAllSelected()
       ? this.selection.clear()
       : this.selection.select(...this.dataSource);
-    this.selectedProduct = [];
   }
 }
